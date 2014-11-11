@@ -2,17 +2,18 @@
 
 ##3rd party libs, required to run the app:
 
-sqlalchemy
-nltk    http://www.nltk.org
-scikits-learn and its' dependensies (numpy, scipy, ...) http://numpy.scipy.org
-apache (originally)
-python application server 'wsgiref'(now)  https://docs.python.org/2/library/wsgiref.html
-mod_wsgi
-sentiwordNEt  http://sentiwordnet.isti.cnr.it
+*sqlalchemy
+*nltk    http://www.nltk.org
+*scikits-learn and its' dependensies (numpy, scipy, ...) http://numpy.scipy.org
+*apache (originally)
+*python application server 'wsgiref'(now)  https://docs.python.org/2/library/wsgiref.html
+*mod_wsgi
+*sentiwordNEt  http://sentiwordnet.isti.cnr.it
 
 
 ###Files:
 
+```
 sentiment.wsgi -	 My main python script integrated my sentiment_analysis.py file aswell as my pre_process.py file. It contains function named 'application' in accordance of wsgi *interface*.
 static/train.csv -	 Consists of the Sanders Corpus of tagged tweets which were used as a training set for the classifier
 template.html  - 	 Is my html form, with twitter bootstrap integrated into it to add a touch of colour. 
@@ -27,7 +28,7 @@ data/ - train.csv : Consists of the Sanders Corpus of tagged tweets which were u
 output.csv: which is the processed tweets from the live feed on the keywords ‘school’, ‘university’ and ‘education’ which was used to test the trained classifier
 Stopwords file: which contains words which  are unnecessary noise in deciding sentiment
 AFFINN-111.text: which is the dictionary of words rated for sentiment between -5 and +5.
-
+```
 
 ####Web Application
 The app is built using wsgi interface
