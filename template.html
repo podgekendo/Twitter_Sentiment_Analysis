@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><!-- Latest compiled and minified CSS -->
+<HEAD>
+  <META content="IE=5.0000" http-equiv="X-UA-Compatible">
+  <META http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <LINK href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <LINK href="http://ec2-54-235-158-126.compute-1.amazonaws.com/static/basic.css" rel="stylesheet" type="text/css">
+  <META name="GENERATOR" content="MSHTML 11.00.9600.17278"></HEAD>
+  <BODY>
+    <TABLE width="100%%" border="1">
+      <TBODY>
+        <TR>
+          <TD bgcolor="#0099cc">
+            <DIV align="center" class="style1">
+              <DIV align="center">
+                <IMG width="134" height="90" src="http://pbs.twimg.com/profile_images/2284174758/v65oai7fxn47qv9nectx.png">Padraig's Naive Bayes Sentiment Analyser 
+                <IMG width="134" height="90" src="http://pbs.twimg.com/profile_images/2284174758/v65oai7fxn47qv9nectx.png">
+              </DIV>
+            </DIV>
+          </TD>
+        </TR>
+      </TBODY>
+    </TABLE>
+    <FORM name="Tweet" class="artist" id="Tweet" role="form" action="sentiment.wsgi" method="post">
+      <DIV class="form-group">
+        <LABEL for="tweetInput">Enter Tweet</LABEL>
+        <INPUT name="tweet" class="form-control" id="tweetInput" type="text" placeholder="Enter the text to be analysed" value="">
+      </DIV>
+      <BUTTON class="btn btn-primary" type="submit">Submit</BUTTON>
+    </FORM>
+    <P>
+      Your tweet is: %s<BR> Sentimental prediction is: <STRONG>%s</STRONG>
+    </P>
+    <div class="pagination-centered">
+      %s
+    </div>
+  </BODY>
+</HTML>

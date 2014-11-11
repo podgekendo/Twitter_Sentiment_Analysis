@@ -1,0 +1,51 @@
+13/09/2014 16:10:24 [WARNING]: Empty parameter! Can't write to DB!
+13/09/2014 16:10:27 [ERROR]: Unhandled exception!
+Traceback (most recent call last):
+  File "./sentiment.wsgi", line 214, in application
+    response_iterable = application_(environ, start_response)
+  File "./sentiment.wsgi", line 174, in application_
+    write_to_db(session, tweet, sentiment)
+  File "./sentiment.wsgi", line 145, in write_to_db
+    session.commit()
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/scoping.py", line 149, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/session.py", line 765, in commit
+    self.transaction.commit()
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/session.py", line 370, in commit
+    self._prepare_impl()
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/session.py", line 350, in _prepare_impl
+    self.session.flush()
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/session.py", line 1879, in flush
+    self._flush(objects)
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/session.py", line 1997, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/util/langhelpers.py", line 57, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/session.py", line 1961, in _flush
+    flush_context.execute()
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 370, in execute
+    rec.execute(self)
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 523, in execute
+    uow
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 64, in save_obj
+    mapper, table, insert)
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 594, in _emit_insert_statements
+    execute(statement, params)
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/base.py", line 717, in execute
+    return meth(self, multiparams, params)
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/sql/elements.py", line 317, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/base.py", line 814, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/base.py", line 927, in _execute_context
+    context)
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/base.py", line 1076, in _handle_dbapi_exception
+    exc_info
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/util/compat.py", line 185, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb)
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/base.py", line 920, in _execute_context
+    context)
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/default.py", line 425, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (OperationalError) no such table: sentiments u'INSERT INTO sentiments (timestamp, tweet, sentiment) VALUES (?, ?, ?)' (1410613827.046175, 'sdafsdf', 'neg')
+13/09/2014 16:10:59 [WARNING]: Empty parameter! Can't write to DB!
