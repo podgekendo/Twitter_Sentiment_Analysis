@@ -3,12 +3,12 @@
 ##3rd party libs, required to run the app:
 
 *sqlalchemy
-*-nltk    http://www.nltk.org 2
-*-scikits-learn and its' dependensies (numpy, scipy, ...) http://numpy.scipy.org 3
-*-apache (originally) 4
-*-python application server 'wsgiref'(now)  https://docs.python.org/2/library/wsgiref.html 5
-*-mod_wsgi 6
-*-sentiwordNEt  http://sentiwordnet.isti.cnr.it 7
+*nltk http://www.nltk.org 
+*scikits-learn and its' dependensies (numpy, scipy, ...) http://numpy.scipy.org 
+*apache(originally) 
+*python application server 'wsgiref'(now)  https://docs.python.org/2/library/wsgiref.html 
+*mod_wsgi 
+*sentiwordNEt  http://sentiwordnet.isti.cnr.it 
 
 
 ###Files:
