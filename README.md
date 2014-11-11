@@ -1,6 +1,6 @@
-Sentiment Classification using NLTK, & Naive Bayes Classifiers
+#Sentiment Classification using NLTK, & Naive Bayes Classifiers
 
-3rd party libs, required to run the app:
+##3rd party libs, required to run the app:
 
 sqlalchemy
 nltk    http://www.nltk.org
@@ -11,7 +11,7 @@ mod_wsgi
 sentiwordNEt  http://sentiwordnet.isti.cnr.it
 
 
-Files:
+###Files:
 
 sentiment.wsgi -	 My main python script integrated my sentiment_analysis.py file aswell as my pre_process.py file. It contains function named 'application' in accordance of wsgi *interface*.
 static/train.csv -	 Consists of the Sanders Corpus of tagged tweets which were used as a training set for the classifier
@@ -29,11 +29,11 @@ Stopwords file: which contains words which  are unnecessary noise in deciding se
 AFFINN-111.text: which is the dictionary of words rated for sentiment between -5 and +5.
 
 
-Web Application
+####Web Application
 The app is built using wsgi interface
 e.g http://webpython.codepoint.net/wsgi_application_interface
 
-Deployment Examples
+#####Deployment Examples
 Deployed on amazon instance with server Ubuntu installed on it. 
 Apache server with  mod_wsgi module is used as Web server.
 Apache configuration listed in httpd.conf file, which usually located on file system here: /etc/apache2/httpd.conf.
